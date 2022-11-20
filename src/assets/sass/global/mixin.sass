@@ -1,0 +1,13 @@
+@use "./variable" as *
+
+=rem($px)
+	font-size: calc(($px / 16) * 1rem)
+=mq-min($breakpoint)
+	@media screen and (min-width: $breakpoint)
+		@content
+=hover
+	@media (any-hover: hover) and (any-pointer: fine)
+		&:hover
+			@content
+=z-index($layer)
+	z-index: #{index($z-index-list, $layer) + 1}
