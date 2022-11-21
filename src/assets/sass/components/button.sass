@@ -1,0 +1,28 @@
+@use "../global/mixin" as *
+@use "../global/variable" as *
+
+.btn
+	&--primary
+		padding: 10px 25px
+		border-radius: 28px
+		background-color: $dark-blue
+		color: $white
+		+rem(16)
+		font-family: Plus Jakarta Sans, sans-serif
+		font-weight: 700
+	&--secondary
+		padding: 15px 35px
+		border-radius: 32px
+		background-image: linear-gradient(to bottom, $pinkish-orange, $darkish-pink)
+		color: $white
+		+rem(16)
+		font-family: Plus Jakarta Sans, sans-serif
+		font-weight: 700
+	&--tertiary
+		padding: 10px 25px
+		border-radius: 28px
+		background-image: linear-gradient(to bottom, $lightish-blue, $darkish-pink)
+		color: $white
+		+rem(16)
+		font-weight: 700
+		font-family: Plus Jakarta Sans, sans-serif
