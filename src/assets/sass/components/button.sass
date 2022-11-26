@@ -3,26 +3,47 @@
 
 .btn
 	&--primary
-		padding: 10px 25px
+		padding: 15px 25px
 		border-radius: 28px
 		background-color: $dark-blue
 		color: $white
 		+rem(16)
 		font-family: Plus Jakarta Sans, sans-serif
 		font-weight: 700
+		min-height: 49px
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		+mq-min($desktop)
+			min-height: 56px
+			+rem(18)
 	&--secondary
-		padding: 15px 35px
+		padding: 10px 35px
+		min-height: 56px
 		border-radius: 32px
 		background-image: linear-gradient(to bottom, $pinkish-orange, $darkish-pink)
 		color: $white
+		display: inline-flex
+		justify-content: center
+		align-items: center
 		+rem(16)
 		font-family: Plus Jakarta Sans, sans-serif
 		font-weight: 700
+		+mq-min($desktop)
+			+rem(18)
+			min-height: 63px
 	&--tertiary
-		padding: 10px 25px
+		padding: 15px 25px
 		border-radius: 28px
 		background-image: linear-gradient(to bottom, $lightish-blue, $darkish-pink)
 		color: $white
 		+rem(16)
 		font-weight: 700
 		font-family: Plus Jakarta Sans, sans-serif
+		display: flex
+		justify-content: center
+		align-items: center
+		min-height: 49px
+		+mq-min($desktop)
+			+rem(18)
+			min-height: 56px

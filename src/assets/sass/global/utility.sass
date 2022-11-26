@@ -1,11 +1,11 @@
 @use "./variable" as *
 @use "./mixin" as *
 
-.display-on-pad
+.display-on-tablet
 	display: none
-	+mq-min($pad)
+	+mq-min($tablet)
 		display: block
-.display-on-sp
+.display-on-mobile
 	display: block
-	+mq-min($pad)
+	+mq-min($tablet)
 		display: none
