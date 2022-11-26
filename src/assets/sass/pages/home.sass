@@ -60,6 +60,7 @@
 			aspect-ratio: 1/1
 			margin-top: 45px
 			padding: 0 10px
+			+z-index("heroImg")
 			+mq-min($tablet)
 				margin-top: 0
 				aspect-ratio: 7/10
@@ -189,6 +190,9 @@
 				color: $pink
 				line-height: 1.56
 				margin-top: 25px
-				display: block
 				font-weight: 700
 				align-self: end
+				transition: color .2s ease-out
+				width: fit-content
+				+hover
+					color: $pink-hover
