@@ -7,5 +7,9 @@ html(lang='en')
 		link(rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml")
 		title Skilled e-learning landing page
 	body
-		p hello world
+		include ./include/header
+		main.home-main
+			include ./include/hero
+			include ./include/courses
+		include ./include/footer
 		script(type='module' src='/assets/js/main.js')

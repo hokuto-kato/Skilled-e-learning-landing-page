@@ -4,7 +4,7 @@ export const font = () => {
 	const html = document.querySelector('html')
 	WebFont.load({
 		google: {
-			families: ['Fraunces:700', 'Montserrat:500,700']
+			families: ['Plus Jakarta Sans:500,700,800']
 		}
 	})
 	setTimeout(() => {

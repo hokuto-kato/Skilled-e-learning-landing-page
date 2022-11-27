@@ -1,0 +1,41 @@
+-
+	const courses = [
+		{
+			icon: "animation",
+			title: "Animation",
+			description: "Learn the latest animation techniques to create stunning motion design and captivate your audience.",
+		},
+		{
+			icon: "design",
+			title: "Design",
+			description: "Create beautiful, usable interfaces to help shape the future of how the web looks.",
+		},
+		{
+			icon: "photography",
+			title: "Photography",
+			description: "Explore critical fundamentals like lighting, composition, and focus to capture exceptional photos.",
+		},
+		{
+			icon: "crypt",
+			title: "Crypt",
+			description: "All you need to know to get started investing in crypto. Go from beginner to advanced with this 54 hour course.",
+		},
+		{
+			icon: "business",
+			title: "Business",
+			description: "A step-by-step playbook to help you start, scale, and sustain your business without outside investment.",
+		},
+	]
+
+section.home-courses
+	.home-courses__content
+		.home-courses__list
+			h2.home-courses__ttl Check out our most popular courses!
+			each course in courses
+				dl.home-courses__item
+					dt.home-courses__item-ttl
+						figure
+							span.home-courses__item-img(class=`icon--${course.icon}` role="img" aria-label=`${course.title} icon`)
+							figcaption.home-courses__item-caption #{course.title}
+					dd.home-courses__item-desc #{course.description}
+						a.home-courses__item-btn(href="#") Get Started

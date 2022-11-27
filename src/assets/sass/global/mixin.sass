@@ -9,5 +9,23 @@
 	@media (any-hover: hover) and (any-pointer: fine)
 		&:hover
 			@content
+=hoverOpacity
+	transition: opacity .2s ease-out
+	@media (any-hover: hover) and (any-pointer: fine)
+		&:hover
+			opacity: .5
 =z-index($layer)
 	z-index: #{index($z-index-list, $layer) + 1}
+=webpBg($selector, $filePath, $fileExtension)
+	#{$noWebpClassName} #{$selector}
+		background-image: url("#{$filePath}_mobile.#{$fileExtension}")
+		+mq-min($tablet)
+			background-image: url("#{$filePath}_desktop.#{$fileExtension}")
+		+mq-min($desktop)
+			background-image: url("#{$filePath}_desktop.#{$fileExtension}")
+	#{$webpClassName} #{$selector}
+		background-image: url("#{$filePath}_mobile.webp")
+		+mq-min($tablet)
+			background-image: url("#{$filePath}_tablet.webp")
+		+mq-min($desktop)
+			background-image: url("#{$filePath}_desktop.webp")
