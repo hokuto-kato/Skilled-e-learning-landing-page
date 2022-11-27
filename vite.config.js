@@ -15,6 +15,7 @@ export default {
 	build: {
 		outDir: '../dist',
 		emptyOutDir: true,
+		publicDir: '../src/public',
 		rollupOptions: {
 			output: {
 				chunkFileNames: 'js/script.[hash].js',
