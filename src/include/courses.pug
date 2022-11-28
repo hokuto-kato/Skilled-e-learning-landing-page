@@ -30,9 +30,9 @@
 section.home-courses
 	.home-courses__content
 		.home-courses__list
-			h2.home-courses__ttl Check out our most popular courses!
+			h2.home-courses__ttl(data-gsap-courses) Check out our most popular courses!
 			each course in courses
-				dl.home-courses__item
+				dl.home-courses__item(data-gsap-courses)
 					dt.home-courses__item-ttl
 						figure
 							span.home-courses__item-img(class=`icon--${course.icon}` role="img" aria-label=`${course.title} icon`)
