@@ -5,7 +5,6 @@
 		Frontend Mentor Challenge
 	</p>
 	<p>
-		<img src="https://img.shields.io/website?down_color=critical&down_message=down&label=vercel&logo=vercel&style=for-the-badge&up_color=brightengreen&up_message=active&url=https://skilled-e-learning-landing-page-sigma.vercel.app/">
 		<img src="https://img.shields.io/static/v1?label=DIFFICULTY&message=NEWBIE&color=6abecd&style=for-the-badge&logo=Frontend+Mentor" alt="DIFFICULTY - NEWBIE">
 	</p>
 	<p>
