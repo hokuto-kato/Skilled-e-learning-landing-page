@@ -1,6 +1,6 @@
 @use "../global/variable" as *
 @use "../global/mixin" as *
-+webpBg(".home-hero__img","/assets/img/bg_hero","png")
++webpBg(".home-hero__img-rect","/assets/img/bg_hero_rect","png")
 .home
 	&-hero
 		+mq-min($tablet)
@@ -31,6 +31,10 @@
 				padding-top: 150px
 				justify-self: end
 				white-space: nowrap
+			&-body
+				overflow: hidden
+				&-text
+					display: inline-block
 		&__description
 			+rem(16)
 			color: $gray
@@ -50,17 +54,14 @@
 			+mq-min($desktop)
 				max-width: 100%
 		&__img
-			background-size: 100%
-			background-repeat: no-repeat
-			background-position: 50% 50%
 			display: grid
 			grid-template-columns: 155px 1fr
 			width: 100%
 			height: auto
-			aspect-ratio: 1/1
+			aspect-ratio: 327/301
 			margin-top: 45px
 			padding: 0 10px
-			+z-index("heroImg")
+			position: relative
 			+mq-min($tablet)
 				margin-top: 0
 				aspect-ratio: 7/10
@@ -72,6 +73,47 @@
 				min-width: 656px
 				transform: translate(165px, -105px)
 				grid-template-columns: auto 1fr
+			&-lady
+				position: absolute
+				top: 0
+				left: 0
+				+z-index("heroImgLady")
+				+mq-min($tablet)
+					top: 70px
+					left: 39px
+					width: 216px
+				+mq-min($desktop)
+					width: 317px
+					top: 167px
+					left: auto
+					right: 219px
+				&-body
+					width: 100%
+			&-rect
+				display: none
+				+mq-min($tablet)
+					display: block
+					position: absolute
+					+z-index("heroImgRect")
+					background-size: contain
+					background-repeat: no-repeat
+					background-position: 0 0
+					width: 297.5px
+					height: 503.5px
+					top: -60px
+					right: 0
+				+mq-min($desktop)
+					width: 536px
+					height: 725.5px
+					top: 0
+				&-overlay
+					position: absolute
+					top: 0
+					left: 0
+					width: 0
+					height: 100%
+					background-image: linear-gradient(90deg, #fff 95%, transparent)
+					+z-index("heroImgRectOverlay")
 			&-list
 				border-radius: 10px
 				box-shadow: 0 34px 54px 0 rgba(6, 22, 141, 0.16)
@@ -97,9 +139,11 @@
 					align-self: end
 					min-width: 100px
 					min-height: 100px
+					position: relative
+					+z-index("heroImgHours")
 					+mq-min($desktop)
 						min-width: 200px
-						transform: translate(0, -95px)
+						top: -95px
 				&.is-members
 					align-self: start
 					justify-self: end
@@ -108,6 +152,7 @@
 					justify-content: center
 					flex-direction: column
 					min-width: 105px
+					+z-index("heroImgMembers")
 					+mq-min(475px)
 						min-width: 200px
 					+mq-min($tablet)
@@ -117,7 +162,9 @@
 					+mq-min($desktop)
 						min-width: 155px
 						align-items: start
-						transform: translate(-70px, 220px)
+						top: 210px
+						right: 70px
+						position: absolute
 	&-courses
 		background-image: linear-gradient(to bottom, $white, $pale-gray)
 		margin-top: 65px
