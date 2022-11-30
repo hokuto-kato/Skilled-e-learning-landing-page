@@ -9,7 +9,7 @@
 	</p>
 	<p>
 		<a href="https://skilled-e-learning-landing-page-sigma.vercel.app/">View Demo</a> ·
-		<a href="https://www.frontendmentor.io/challenges/skilled-elearning-landing-page-S1ObDrZ8q/hub/skilled-elearning-landing-page-QD3uF6eQFP"> View on frontend mentor</a>
+		<a href="https://www.frontendmentor.io/solutions/skilled-elearning-landing-page-w5Z__vuHmO"> View on frontend mentor</a>
 	</p>
 	<p>
 		<img src="./assets/img_preview.jpg" alt="Skilled e-learning landing page" style="width: 100%;">
