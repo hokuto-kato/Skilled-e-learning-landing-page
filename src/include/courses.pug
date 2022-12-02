@@ -32,10 +32,13 @@ section.home-courses
 		.home-courses__list
 			h2.home-courses__ttl(data-gsap-courses) Check out our most popular courses!
 			each course in courses
-				dl.home-courses__item(data-gsap-courses)
+				a.home-courses__item(href="#" data-gsap-courses)
+					.home-courses__item-bg
+						.home-courses__item-bg-body
 					dt.home-courses__item-ttl
 						figure
 							span.home-courses__item-img(class=`icon--${course.icon}` role="img" aria-label=`${course.title} icon`)
 							figcaption.home-courses__item-caption #{course.title}
 					dd.home-courses__item-desc #{course.description}
-						a.home-courses__item-btn(href="#") Get Started
+						object.home-courses__item-link
+							a(href="#") Get Started
