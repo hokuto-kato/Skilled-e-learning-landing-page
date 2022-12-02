@@ -49,4 +49,4 @@
 ### Useful resources
 
 -   [Overpass](https://www.overpass.com/)  
-    I referred to the animation movement.
+    I referred to the animation and interaction.
