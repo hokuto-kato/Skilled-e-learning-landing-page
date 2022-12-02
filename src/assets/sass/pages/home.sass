@@ -205,13 +205,52 @@
 				grid-template-columns: repeat(3, 1fr)
 				gap: 80px 30px
 		&__item
-			background-color: $white
 			padding: 0 30px 30px
-			border-radius: 10px
 			display: grid
 			grid-template-rows: auto auto
+			pointer-events: none
+			@media (any-hover: hover) and (any-pointer: fine)
+				pointer-events: auto
+			+hover
+				.home-courses__item-bg
+					transform: scale(1.05)
+					box-shadow: 0 34px 54px 0 rgb(6 22 141 / 16%)
+				.home-courses__item-bg-body
+					transform: translate(-50%,50%) scale(1)
+					opacity: 0
+				.home-courses__item-ttl
+					transform: translateY(-10px)
+				.home-courses__item-desc
+					transform: translateY(-10px)
+			&-bg
+				background-color: $white
+				border-radius: 10px
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				overflow: hidden
+				scale: 1
+				transition: all .5s cubic-bezier(.165,.84,.44,1)
+				transition-property: transform,box-shadow
+				+z-index("courseBg")
+				&-body
+					display: block
+					width: 230%
+					height: 230%
+					border-radius: 50%
+					position: absolute
+					bottom: 0
+					left: 50%
+					transform: translate(-50%,50%) scale(0)
+					opacity: 1
+					transition: transform .5s cubic-bezier(.165,.84,.44,1),opacity .5s cubic-bezier(.895,.03,.685,.22)
+					background-color: rgba($pale-gray, .5)
 			&-ttl
 				margin-top: -27px
+				+z-index("courseTtl")
+				transition: transform .5s cubic-bezier(.165,.84,.44,1)
 			&-caption
 				+rem(20)
 				color: $dark-blue
@@ -222,6 +261,7 @@
 					+rem(24)
 					margin-top: 30px
 			&-desc
+				+z-index("courseDesc")
 				+rem(16)
 				color: $gray
 				font-weight: 500
@@ -229,10 +269,11 @@
 				margin-top: 15px
 				display: grid
 				grid-template-rows: auto auto
+				transition: transform .5s cubic-bezier(.165,.84,.44,1)
 				+mq-min($desktop)
 					+rem(18)
 					margin-top: 25px
-			&-btn
+			&-link
 				+rem(18)
 				color: $pink
 				line-height: 1.56
@@ -241,5 +282,6 @@
 				align-self: end
 				transition: color .2s ease-out
 				width: fit-content
+				pointer-events: auto
 				+hover
 					color: $pink-hover

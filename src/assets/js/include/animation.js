@@ -160,25 +160,18 @@ export const animation = () => {
 		'<'
 	)
 
-	const mediaQuery = window.matchMedia('(min-width: 768px)')
-	function listener(e) {
-		if (!e.matches) {
-			const coursesTl = gsap.timeline({
-				scrollTrigger: {
-					trigger: courses,
-					start: 'top 90%',
-					toggleActions: 'play none none none'
-				}
-			})
-			coursesTl.to(courses, {
-				duration: 1,
-				opacity: 1,
-				y: 0,
-				ease: Power4.easeOut,
-				stagger: 0.1
-			})
+	const coursesTl = gsap.timeline({
+		scrollTrigger: {
+			trigger: courses,
+			start: 'top 90%',
+			toggleActions: 'play none none none'
 		}
-	}
-	mediaQuery.addEventListener('change', listener)
-	listener(mediaQuery)
+	})
+	coursesTl.to(courses, {
+		duration: 1,
+		opacity: 1,
+		y: 0,
+		ease: Power4.easeOut,
+		stagger: 0.1
+	})
 }
