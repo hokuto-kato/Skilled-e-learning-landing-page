@@ -30,6 +30,8 @@ export const animation = () => {
 		'[data-gsap-hero-rect-overlay]'
 	)
 	const courses = document.querySelectorAll('[data-gsap-courses]')
+	const coursesArray = [...courses]
+	console.log(coursesArray)
 
 	//	init
 	gsap.set([headerHeading, headerHeadingBtn, heroTtlText], {
@@ -155,23 +157,9 @@ export const animation = () => {
 			duration: 1,
 			opacity: 1,
 			y: 0,
-			ease: Power4.easeOut
+			ease: Power4.easeOut,
+			stagger: 0.1
 		},
 		'<'
 	)
-
-	const coursesTl = gsap.timeline({
-		scrollTrigger: {
-			trigger: courses,
-			start: 'top 90%',
-			toggleActions: 'play none none none'
-		}
-	})
-	coursesTl.to(courses, {
-		duration: 1,
-		opacity: 1,
-		y: 0,
-		ease: Power4.easeOut,
-		stagger: 0.1
-	})
 }
